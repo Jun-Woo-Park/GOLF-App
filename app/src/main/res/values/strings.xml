@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">골프카트 자율주행</string>
+    <string name="image_view">Image View</string>
+    <string name="detect">테스트</string>
+    <string name="setting">설정</string>
+    <string name="run_model">Running the model...</string>
+    <string name="restart">Restart</string>
+    <string name="webbutton">APP_갱신</string>
+    <string name="aboutus">이것에 대하여</string>
+    <string name="exiting">탈출하다</string>
+    <string name="select">Select</string>
+    <string name="live">안전 보조 시작</string>
+    <string name="app_title">골프카트 자율주행</string>
+    <string name="app_author">pan</string>
+    <string name="devices">USB Devices</string>
+</resources>

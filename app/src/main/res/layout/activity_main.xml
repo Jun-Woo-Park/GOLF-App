@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="4dp"
+        android:background="@color/white"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/information_table"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintLeft_toRightOf="@+id/imageView"
+        >
+
+        <TextView
+            android:id="@+id/app_name_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=""
+            android:textSize="15pt"
+            android:background="@color/header"
+            />
+
+        <TextView
+            android:id="@+id/app_date_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=""
+            android:textSize="15pt"
+            />
+
+        <TextView
+            android:id="@+id/image_size_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=""
+            android:textSize="15pt"
+            />
+
+        <TextView
+            android:id="@+id/steering_angle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@color/red"
+            android:text=""
+            android:textSize="15pt"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Line "
+                android:textSize="15pt"
+                />
+
+
+            <Switch
+                android:id="@+id/line_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:checked="false"
+                android:switchMinWidth="70dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Object "
+                android:textSize="15pt"
+                />
+
+            <Switch
+                android:id="@+id/object_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:switchMinWidth="70dp"
+                android:layout_gravity="center"
+                android:checked="false"
+                />
+
+        </LinearLayout>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/default_fps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="FPS : "
+                android:textSize="15pt"
+                />
+            <TextView
+                android:id="@+id/fps_value"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=""
+                android:textSize="15pt"
+                />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+
+            <TextView
+                android:id="@+id/default_elec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="베터리 : "
+                android:textSize="15pt"
+                />
+
+            <TextView
+                android:id="@+id/elec_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="            "
+                android:textSize="15pt"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            <TextView
+                android:id="@+id/default_ele"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="전류 : "
+                android:textSize="15pt"
+                />
+
+            <TextView
+                android:id="@+id/ele_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=" "
+                android:textSize="15pt"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            <TextView
+                android:id="@+id/text_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Ram : "
+                android:textSize="15pt"
+                />
+
+            <TextView
+                android:id="@+id/text_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=" "
+                android:textSize="15pt"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            <TextView
+                android:id="@+id/velo_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=" 충돌 : "
+                android:textSize="15pt"
+                />
+            <TextView
+                android:id="@+id/crash_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=" "
+                android:textSize="12pt"
+                />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            <TextView
+                android:id="@+id/angle_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="속력 : "
+                android:textSize="15pt"
+                />
+            <TextView
+                android:id="@+id/cart_speed_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=" "
+                android:textSize="15pt"
+                />
+        </TableRow>
+
+        <SeekBar
+            android:id="@+id/cart_speed_seek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/speed_seek"
+            android:thumb="@drawable/cart"
+            android:progressBackgroundTint="@color/black"
+            android:max="250"
+            android:progress="100"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LD_P "
+                android:textSize="15pt"
+                />
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:switchMinWidth="70dp"
+                android:layout_gravity="center"
+                android:checked="true"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Img_B "
+                android:textSize="15pt"
+                />
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:switchMinWidth="70dp"
+                android:layout_gravity="center"
+                android:checked="true"
+                />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/cart_stop"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:text="긴급멈춤"
+            android:textSize="50dp"
+            android:background="@color/colorRecieveText"
+            />
+
+        <Button
+            android:id="@+id/test_start"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:text="테스트 시작"
+            android:textSize="50dp"
+            android:background="@color/colorSendText"
+            />
+    </TableLayout>
+
+    <ImageView
+        android:id="@+id/golf_map"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/golf_map"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="4dp"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintLeft_toRightOf="@+id/information_table"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Button
+        android:id="@+id/btn_controller"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:textColor="@color/white"
+        android:text="컨트롤러"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_setting" />
+
+
+    <Button
+        android:id="@+id/btn_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:textColor="@color/white"
+        android:text="테스트 이미지"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_controller" />
+
+    <TextureView
+        android:id="@+id/view_finder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="0dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 시리얼 컨트롤러 부분 -->
+    <LinearLayout
+        android:id="@+id/layout_controller"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/main"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        >
+        <include layout="@layout/list" android:id="@+id/connect_list"/>
+
+        <!--        <ListView-->
+        <!--            android:id="@+id/serial_list"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            />-->
+        <!--
+         <include layout="@layout/list" android:id="@+id/connect_list"/>
+
+        <include layout="@layout/serial_controller" android:id="@+id/connect_list"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <Button
+                android:id="@+id/btnRead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="카트 등록"
+                />
+
+            <Button
+                android:id="@+id/btnStop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="멈춰"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="420dp"
+            android:layout_height="180dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="210dp"
+                android:layout_height="180dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:text="속도"
+                        android:textSize="15pt" />
+
+                    <TextView
+                        android:layout_width="145dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:text=" 300Km/h"
+                        android:textSize="12pt" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary">
+
+                    <SeekBar
+                        android:id="@+id/seek_velo"
+                        android:layout_width="210dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="0"
+                        android:max="30"
+                        android:progress="0" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:text="몰라"
+                        android:textSize="15pt" />
+
+                    <TextView
+                        android:layout_width="145dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:text=" 777Km/h"
+                        android:textSize="12pt" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary">
+
+                    <SeekBar
+                        android:id="@+id/seek_angle"
+                        android:layout_width="210dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="0"
+                        android:max="40"
+                        android:progress="20" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="210dp"
+                android:layout_height="180dp"
+                android:orientation="vertical">
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="3"
+                android:rowCount="3"
+                android:orientation="horizontal"
+                >
+
+                <Button android:text="왼쪽 대각"/>
+                <Button android:text="왼쪽 대각"/>
+                <Button android:text="왼쪽 대각"/>
+                <Button android:text="왼쪽 대각"/>
+                <Button android:text="왼쪽 대각"/>
+                <Button android:text="왼쪽 대각"/>
+                <Button android:text="왼쪽 대각"/>
+                <Button android:text="왼쪽 대각"/>
+                <Button android:text="왼쪽 대각"/>
+
+
+            </GridLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        -->
+    </LinearLayout>
+    <!-- -->
+    <com.jun.golf.ResultView
+        android:id="@+id/resultView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:background="@color/Transparent"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/detect_input"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="@color/imageResultbg"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/lane_input"
+        android:layout_width="200dp"
+        android:layout_height="72dp"
+        android:background="@color/imageResultbg"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <!--
+        <SeekBar
+            android:id="@+id/txtAlarm_time_seek"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="100dp"
+            android:max="100"
+            android:progress="12"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/txtFront"/>
+            app:layout_constraintTop_toBottomOf="@+id/txtThresh"
+            -->
+    <!--
+        <Button
+            android:id="@+id/ultra_fast_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:text="급속 식별"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+    -->
+    <Button
+        android:id="@+id/btn_setting"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="0dp"
+        android:text="@string/setting"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <SeekBar
+        android:id="@+id/sb_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:alpha="1.0"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/imageView"
+        app:layout_constraintStart_toStartOf="@id/imageView"
+        app:layout_constraintEnd_toEndOf="@id/imageView" />
+
+
+
+    <Button
+        android:id="@+id/camera_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:text="카메라 권환"
+        android:visibility="gone"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_info" />
+
+    <Button
+        android:id="@+id/rec_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="카메라 녹화"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_photo"
+        />
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:paddingStart="5dp"
+        android:layout_marginTop="10dp"
+        android:width="110dp"
+        android:background="@color/Transparent"
+        android:textColor="#FF0FFF"
+        android:ellipsize="none"
+        android:maxLines="15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rec_video"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/test_video_pic"
+        android:visibility="gone"
+        tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/btn_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Line 영상 테스트"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_info"
+        />
+
+    <Button
+        android:id="@+id/btn_direction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Object 영상 테스트"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_video"
+        />
+
+    <Button
+        android:id="@+id/btn_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="카메라 화면 후면 전환"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_direction"
+        />
+
+    <Button
+        android:id="@+id/menubar_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="숨기기"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_camera"
+        />
+
+    <SeekBar
+        android:id="@+id/sb_video_speed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/view_finder" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
